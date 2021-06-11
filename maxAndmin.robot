@@ -12,22 +12,19 @@ ${scalarStop}  Thankyou
 Minimum Case
     ${i} =  Set Variable  ${EMPTY}
     FOR  ${i}  IN RANGE  1  10
-        #Log to console  ${i}
-         IF  '${i}' == 1
-            Log to console  Minimum number
-            Should Be Equal  ${i}  1
-            Exit For Loop
-        END
+        Exit For Loop If  '${i}' == '1'
+        ${min} =  Set Variable  ${i}
     END
+        Log to console  minimum number is ${i}
+        #Should Be Equal  ${i}  1
 
-Maximum Case    
+Maximum Case
     ${i} =  Set Variable  ${EMPTY}
     FOR  ${i}  IN RANGE  1  10
-    #Log to console  ${i}
-    IF  '${i}' == 10 
-            Log to console  Maximum    
-            Should Be Equal  ${i}  10
-            Exit For Loop
-        END
+        Exit For Loop If  '${i}' == '11'
+        ${min} =  Set Variable  ${i}
     END
+        Log to console  minimum number is ${i}
+        #Should Be Equal  ${i}  1
+
 
