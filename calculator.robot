@@ -10,7 +10,8 @@ ${scalarStop}  Thankyou
 
 
 *** Test Case ***
-Plus 
+
+Equation 
     ${a} =  Set Variable  2
     
     FOR  ${var}  IN RANGE  1  5
@@ -31,6 +32,7 @@ Plus
     END
         Log To Console  The desired answer is ${c}
         #Should Be Equal  ${c}  9
+        
     
 
 
