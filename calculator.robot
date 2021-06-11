@@ -31,7 +31,7 @@ Equation
         END  
     END
         Log To Console  The desired answer is ${c}
-        #Should Be Equal  ${c}  9
+        Should Be Equal As Integers  ${c}  9
         
     
 
